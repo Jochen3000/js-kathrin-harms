@@ -39,3 +39,6 @@ alwaysTakeMeBlock.forEach(block => {
     block.classList.remove('hovered');
   });
 });
+
+// get div info from image atributes
+
