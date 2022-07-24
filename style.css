@@ -1,5 +1,17 @@
-
-
-.section {
-    background-color: green;
-}
+/* font smoothing */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+  }
+  
+  /* style foldericon on js hover */
+  svg {
+    fill: white;
+    transition: fill .4s ease;
+    }
+  
+  .hovered svg {
+    fill: #577477;
+  } 
+    
