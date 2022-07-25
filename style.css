@@ -15,5 +15,22 @@ body {
     fill: #577477;
   } 
 
+/* temp code */
+  #w-node-_91b4185a-06d8-18c7-a395-d524d5aff12c-698cfd40 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+
+  #w-node-_91b4185a-06d8-18c7-a395-d524d5aff12d-698cfd40 {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    margin-top: 30px;
+  }
+
+  #w-node-_91b4185a-06d8-18c7-a395-d524d5aff12e-698cfd40 {
+    grid-column-start: 10;
+    grid-column-end: 14;
+  }
+
 
     

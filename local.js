@@ -43,13 +43,13 @@ alwaysTakeMeBlock.forEach(block => {
 // get div info from image atributes
 const portfolioImage = document.querySelectorAll('.rowgrid img');
 
-//add additional stuff
-portfolioImage[0].insertAdjacentHTML('beforebegin', '<div class ="alwaystakemeblock"></div>');
-const imageParent = document.querySelector('.alwaystakemeblock');
-const imageLink = portfolioImage[0].getAttribute('reportage');
-const ahrefOpen = imageLink ? `<a href="/${imageLink}"> ` : `<div class="nolink">`;
-const ahrefClose = imageLink ? `</a> ` : `</div>`;
-const stackIcon = imageLink ? `
+portfolioImage.forEach((image) => {
+  image.insertAdjacentHTML('beforebegin', '<div class ="alwaystakemeblock"></div>');
+  const imageParent = image.previousElementSibling;
+  const imageLink = image.getAttribute('reportage');
+  const ahrefOpen = imageLink ? `<a href="/${imageLink}"> ` : `<div class="nolink">`;
+  const ahrefClose = imageLink ? `</a> ` : `</div>`;  
+  const stackIcon = imageLink ? `
   <div class="w-embed">
     <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
       <mask id="path-1-inside-1_116_138" fill="white">
@@ -60,28 +60,25 @@ const stackIcon = imageLink ? `
     </svg>
   </div>  
 ` : '';
-
+  
 imageParent.innerHTML=`
   ${ahrefOpen}
     <div class="portfolio-image"></div>              
     <div class="imagecaption">
-      <p class="paragraph">${portfolioImage[0].alt}</p>
-      ${stackIcon}     
+      <p class="paragraph">${image.alt}</p> 
+      ${stackIcon}   
     </div>
-    ${ahrefClose}
+  ${ahrefClose}
 `;
 const imageContainer = imageParent.querySelector('.portfolio-image');
-imageContainer.appendChild(portfolioImage[0]);
+imageContainer.appendChild(image);
 
-//ternary 
-
-
-console.log(ahrefOpen);
-
-
-// copy grid info
-const styleImage = getComputedStyle(portfolioImage[0]);
+// copy grid setting from img to div class
+const styleImage = getComputedStyle(image);
 imageParent.style.gridColumnStart = styleImage.gridColumnStart;
 imageParent.style.gridColumnEnd = styleImage.gridColumnEnd;
+});
+
+
 
 
