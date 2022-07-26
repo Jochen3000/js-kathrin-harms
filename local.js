@@ -1,13 +1,7 @@
-// Only trigger on mobile
+// Move elements out of slider on mobile
 const mediaQuery = window.matchMedia('(max-width: 479px)')
-
-// Check if the media query is true
 if (mediaQuery.matches) {
-
-  //Move divs to destination 
   const newDestination = document.querySelector('.new-home'); 
-
-  // foreach in action
   const myListFunction = document.querySelectorAll('.slider .slidergrid');
   myListFunction.forEach((element) => {
     newDestination.appendChild(element);
@@ -28,17 +22,6 @@ const observer = new IntersectionObserver(entries => {
     })
 }, { threshold: 0 });
   observer.observe(document.querySelector('.footer-wrap'));
-  
-// Hover effect foldericon
-const alwaysTakeMeBlock = document.querySelectorAll('.alwaystakemeblock');
-alwaysTakeMeBlock.forEach(block => {
-  block.addEventListener('mouseover', () => {
-    block.classList.add('hovered');
-  });
-  block.addEventListener('mouseout', () => {
-    block.classList.remove('hovered');
-  });
-});
 
 // get div info from image atributes
 const portfolioImage = document.querySelectorAll('.rowgrid img');
@@ -79,6 +62,15 @@ imageParent.style.gridColumnStart = styleImage.gridColumnStart;
 imageParent.style.gridColumnEnd = styleImage.gridColumnEnd;
 });
 
-
+// Hover effect foldericon
+const alwaysTakeMeBlock = document.querySelectorAll('.alwaystakemeblock');
+alwaysTakeMeBlock.forEach(block => {
+  block.addEventListener('mouseover', () => {
+    block.classList.add('hovered');
+  });
+  block.addEventListener('mouseout', () => {
+    block.classList.remove('hovered');
+  });
+});
 
 
