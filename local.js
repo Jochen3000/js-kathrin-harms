@@ -9,19 +9,19 @@ if (mediaQuery.matches) {
 }
 
 // show backtotop button when footer is intersecting
-const backToTop = document.querySelector('.backuplink');
+// const backToTop = document.querySelector('.backuplink');
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const intersecting = entry.isIntersecting
-      if(intersecting){
-        backToTop.style.opacity = '1';
-      } else {
-        backToTop.style.opacity = '0';
-      }
-    })
-}, { threshold: 0 });
-  observer.observe(document.querySelector('.footer-wrap'));
+// const observer = new IntersectionObserver(entries => {
+//     entries.forEach(entry => {
+//       const intersecting = entry.isIntersecting
+//       if(intersecting){
+//         backToTop.style.opacity = '1';
+//       } else {
+//         backToTop.style.opacity = '0';
+//       }
+//     })
+// }, { threshold: 0 });
+//   observer.observe(document.querySelector('.footer-wrap'));
 
 // get div info from image atributes
 const portfolioImage = document.querySelectorAll('.rowgrid img');
