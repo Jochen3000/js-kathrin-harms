@@ -54,7 +54,7 @@
     z-index: 2;
     font-size: 40px;
     text-decoration: none;
-    left: -30px;
+    left: -20px;
     border: 0;
     top: 50%;
     cursor: pointer;
@@ -72,7 +72,7 @@
   }
   .glider-next {
     opacity: 0.2;
-    right: -30px;
+    right: -20px;
     left: auto;
   }
   .glider-next.disabled,
