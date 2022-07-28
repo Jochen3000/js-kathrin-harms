@@ -54,12 +54,12 @@
     z-index: 2;
     font-size: 40px;
     text-decoration: none;
-    left: -23px;
+    left: -30px;
     border: 0;
     top: 50%;
     cursor: pointer;
     color: #666;
-    opacity: 1;
+    opacity: .2;
     line-height: 1;
     transition: opacity .5s cubic-bezier(.17,.67,.83,.67),
                 color .5s cubic-bezier(.17,.67,.83,.67);
@@ -68,20 +68,23 @@
   .glider-next:hover,
   .glider-prev:focus,
   .glider-next:focus {
-    color: #a89cc8;
+    opacity: 1;
   }
   .glider-next {
-    right: -23px;
+    opacity: 0.2;
+    right: -30px;
     left: auto;
   }
   .glider-next.disabled,
   .glider-prev.disabled {
-    opacity: .25;
+    opacity: 0;
     color: #666;
     cursor: default;
   }
   .glider-slide {
     min-width: 150px;
+    margin-left: 8px;
+    margin-right: 8px;
   }
   .glider-hide {
     opacity: 0;

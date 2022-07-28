@@ -79,7 +79,7 @@ new Glider(document.querySelector('.glider'), {
   arrows: {
     prev: '.glider-prev',
     next: '.glider-next'
-  }
+  },
 });
 
 
