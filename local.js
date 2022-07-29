@@ -1,15 +1,3 @@
-// Move elements out of slider on mobile
-const mediaQuery = window.matchMedia('(max-width: 479px)')
-if (mediaQuery.matches) {
-  const newDestination = document.querySelector('.new-home'); 
-  const myListFunction = document.querySelectorAll('.slider .slidergrid');
-  myListFunction.forEach((element) => {
-    newDestination.appendChild(element);
-  });
-}
-
-// show backtotop button when footer is intersecting
-// const backToTop = document.querySelector('.backuplink');
 
 // const observer = new IntersectionObserver(entries => {
 //     entries.forEach(entry => {
@@ -60,6 +48,12 @@ imageContainer.appendChild(image);
 const styleImage = getComputedStyle(image);
 imageParent.style.gridColumnStart = styleImage.gridColumnStart;
 imageParent.style.gridColumnEnd = styleImage.gridColumnEnd;
+
+// Remove margin top on mobile of image by removing classes
+const mediaQuery = window.matchMedia('(max-width: 479px)')
+if (mediaQuery.matches) {
+  image.removeAttribute('class');
+  }
 });
 
 // Hover effect foldericon
