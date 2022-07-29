@@ -1,3 +1,6 @@
+// General //
+const mediaQuery = window.matchMedia('(max-width: 479px)');
+
 // back to top arrow on Homepage //
 if (document.querySelector('body').classList.contains('bodyhome')){
   const backToTop = document.querySelector('.backuplink');
@@ -50,7 +53,6 @@ if (document.querySelector('body').classList.contains('bodyhome')){
   imageParent.style.gridColumnStart = styleImage.gridColumnStart;
   imageParent.style.gridColumnEnd = styleImage.gridColumnEnd;
   // Remove margin top on mobile of image by removing classes
-  const mediaQuery = window.matchMedia('(max-width: 479px)')
   if (mediaQuery.matches) {
     image.removeAttribute('class');
     }
@@ -71,7 +73,7 @@ if (document.querySelector('body').classList.contains('bodyhome')){
 }
 
 // glider.js on reportage pages
-if (document.querySelector('body').classList.contains('bodyreportage')){
+if (document.querySelector('body').classList.contains('bodyreportage') && !mediaQuery.matches){
   new Glider(document.querySelector('.glider'), {
     slidesToShow: 1,
     arrows: {
