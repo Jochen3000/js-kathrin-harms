@@ -53,17 +53,13 @@ if (document.querySelector('body').classList.contains('bodyhome')){
   imageParent.style.gridColumnStart = styleImage.gridColumnStart;
   imageParent.style.gridColumnEnd = styleImage.gridColumnEnd;
 
-
   // fix webflow img sizes bug
-  const gridColumnWidth = (window.innerWidth - 2*40 - 27*16) / 28; // calculate column width
+  const gridColumnWidth = (window.innerWidth - 80 - 22*16) / 23; // calculate column width
   const imageSpan = styleImage.gridColumnEnd - styleImage.gridColumnStart;
   const correctImageSize = (((gridColumnWidth + 16) * imageSpan));
   const correctImageVW = correctImageSize * 100 / window.innerWidth;
   const correctSizesAttribute = `(min-width: 480px) ${correctImageVW}vw, 100vw)`;
   image.setAttribute("sizes", correctSizesAttribute);
-
-  console.log(imageSpan, correctImageSize ,correctImageVW, image.currentSrc);
-
 
   // Remove margin top on mobile of image by removing classes
   if (mediaQuery.matches) {
