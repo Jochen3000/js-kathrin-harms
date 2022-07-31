@@ -4,8 +4,13 @@ body {
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
   }
+
+  /* image captions */
+  .imagecaption p {
+    font-size: 14px;
+  }
   
-  /* style foldericon on js hover */
+  /* foldericon on js hover */
   svg {
     fill: white;
     transition: fill .4s ease;
