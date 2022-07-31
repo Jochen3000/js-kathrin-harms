@@ -1,5 +1,6 @@
 // General //
-const mediaQuery = window.matchMedia('(max-width: 479px)');
+const mediaQuery = window.matchMedia('(max-width: 479px)'); // mobile
+const mediaQueryTabletV = window.matchMedia('(max-width: 991px)');
 
 // back to top arrow on Homepage //
 if (document.querySelector('body').classList.contains('bodyhome')){
@@ -82,7 +83,7 @@ if (document.querySelector('body').classList.contains('bodyhome')){
 }
 
 // glider.js on reportage pages
-if (document.querySelector('body').classList.contains('bodyreportage') && !mediaQuery.matches){
+if (document.querySelector('body').classList.contains('bodyreportage') && !mediaQueryTabletV.matches){
   new Glider(document.querySelector('.glider'), {
     slidesToShow: 1,
     arrows: {
