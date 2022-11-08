@@ -55,8 +55,6 @@ if (document.querySelector('body').classList.contains('bodyhome')) {
     imageParent.style.gridColumnEnd = styleImage.gridColumnEnd;
     imageParent.style.alignSelf = styleImage.alignSelf;
 
-    console.log('mein style', styleImage.alignSelf);
-
     // fix webflow img sizes bug
     const gridColumnWidth = (window.innerWidth - 80 - 22 * 16) / 23; // calculate column width
     const imageSpan = styleImage.gridColumnEnd - styleImage.gridColumnStart;

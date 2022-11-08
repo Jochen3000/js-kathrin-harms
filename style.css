@@ -6,8 +6,20 @@ body {
 }
 
 /* image captions */
+.imagecaption {
+  -webkit-justify-content: end;
+  justify-content: end;
+}
+
 .imagecaption p {
   font-size: 14px;
+  padding-right: 4px;
+  text-transform: uppercase;
+}
+
+/* kleiner hack wegen icon */
+.w-embed {
+  padding-top: 1px;
 }
 
 /* foldericon on js hover */
@@ -19,6 +31,3 @@ svg {
 .hovered svg {
   fill: #577477;
 }
-
-/* glider styling */
-.glider-contain {}
