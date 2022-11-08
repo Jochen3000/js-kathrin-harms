@@ -3,30 +3,30 @@ const mediaQuery = window.matchMedia('(max-width: 479px)'); // mobile
 const mediaQueryTabletV = window.matchMedia('(max-width: 991px)');
 
 // back to top arrow on Homepage //
-if (document.querySelector('body').classList.contains('bodyhome')){
+if (document.querySelector('body').classList.contains('bodyhome')) {
   const backToTop = document.querySelector('.backuplink');
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       const intersecting = entry.isIntersecting
-      if(intersecting){
+      if (intersecting) {
         backToTop.style.opacity = '1';
       } else {
         backToTop.style.opacity = '0';
       }
     })
-}, { threshold: 0 });
+  }, { threshold: 0 });
   observer.observe(document.querySelector('.footer-wrap'));
 }
 
 // generate image captions and reportage links on Homepage //
-if (document.querySelector('body').classList.contains('bodyhome')){
+if (document.querySelector('body').classList.contains('bodyhome')) {
   const portfolioImage = document.querySelectorAll('.rowgrid img');
   portfolioImage.forEach((image) => {
     image.insertAdjacentHTML('beforebegin', '<div class ="alwaystakemeblock"></div>');
     const imageParent = image.previousElementSibling;
     const imageLink = image.getAttribute('reportage');
     const ahrefOpen = imageLink ? `<a href="/${imageLink}"> ` : `<div class="nolink">`;
-    const ahrefClose = imageLink ? `</a> ` : `</div>`;  
+    const ahrefClose = imageLink ? `</a> ` : `</div>`;
     const stackIcon = imageLink ? `
     <div class="w-embed">
       <svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,7 +38,7 @@ if (document.querySelector('body').classList.contains('bodyhome')){
       </svg>
     </div>  
   ` : '';
-  imageParent.innerHTML=`
+    imageParent.innerHTML = `
     ${ahrefOpen}
       <div class="portfolio-image"></div>              
       <div class="imagecaption">
@@ -47,30 +47,33 @@ if (document.querySelector('body').classList.contains('bodyhome')){
       </div>
     ${ahrefClose}
   `;
-  const imageContainer = imageParent.querySelector('.portfolio-image');
-  imageContainer.appendChild(image);
-  // copy grid setting from img to div class
-  const styleImage = getComputedStyle(image);
-  imageParent.style.gridColumnStart = styleImage.gridColumnStart;
-  imageParent.style.gridColumnEnd = styleImage.gridColumnEnd;
+    const imageContainer = imageParent.querySelector('.portfolio-image');
+    imageContainer.appendChild(image);
+    // copy grid setting from img to div class
+    const styleImage = getComputedStyle(image);
+    imageParent.style.gridColumnStart = styleImage.gridColumnStart;
+    imageParent.style.gridColumnEnd = styleImage.gridColumnEnd;
+    imageParent.style.alignSelf = styleImage.alignSelf;
 
-  // fix webflow img sizes bug
-  const gridColumnWidth = (window.innerWidth - 80 - 22*16) / 23; // calculate column width
-  const imageSpan = styleImage.gridColumnEnd - styleImage.gridColumnStart; 
-  const correctImageSize = (((gridColumnWidth + 16) * imageSpan)); 
-  const correctImageVW = correctImageSize * 100 / window.innerWidth; 
-  const correctSizesAttribute = `(min-width: 480px) ${correctImageVW}vw, 100vw)`;
-  image.setAttribute("sizes", correctSizesAttribute);
+    console.log('mein style', styleImage.alignSelf);
 
-  // Remove margin top on mobile of image by removing classes
-  if (mediaQuery.matches) {
-    image.removeAttribute('class');
+    // fix webflow img sizes bug
+    const gridColumnWidth = (window.innerWidth - 80 - 22 * 16) / 23; // calculate column width
+    const imageSpan = styleImage.gridColumnEnd - styleImage.gridColumnStart;
+    const correctImageSize = (((gridColumnWidth + 16) * imageSpan));
+    const correctImageVW = correctImageSize * 100 / window.innerWidth;
+    const correctSizesAttribute = `(min-width: 480px) ${correctImageVW}vw, 100vw)`;
+    image.setAttribute("sizes", correctSizesAttribute);
+
+    // Remove margin top on mobile of image by removing classes
+    if (mediaQuery.matches) {
+      image.removeAttribute('class');
     }
   });
 }
 
 // Hover effect foldericon //
-if (document.querySelector('body').classList.contains('bodyhome')){
+if (document.querySelector('body').classList.contains('bodyhome')) {
   const alwaysTakeMeBlock = document.querySelectorAll('.alwaystakemeblock');
   alwaysTakeMeBlock.forEach(block => {
     block.addEventListener('mouseover', () => {
@@ -83,7 +86,7 @@ if (document.querySelector('body').classList.contains('bodyhome')){
 }
 
 // glider.js on reportage pages
-if (document.querySelector('body').classList.contains('bodyreportage') && !mediaQueryTabletV.matches){
+if (document.querySelector('body').classList.contains('bodyreportage') && !mediaQueryTabletV.matches) {
   new Glider(document.querySelector('.glider'), {
     slidesToShow: 1,
     arrows: {

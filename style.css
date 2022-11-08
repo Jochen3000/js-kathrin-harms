@@ -1,29 +1,31 @@
 /* font smoothing */
 body {
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased;
-  }
-
-  /* image captions */
-  .imagecaption p {
-    font-size: 14px;
-  }
-  
-  /* foldericon on js hover */
-  svg {
-    fill: white;
-    transition: fill .4s ease;
-    }
-  
-  .hovered svg {
-    fill: #577477;
-  } 
-
-  /* glider styling */
-.glider-contain {
-
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
 }
 
+/* image captions */
+.imagecaption p {
+  font-size: 14px;
+}
 
-    
+/* foldericon on js hover */
+svg {
+  fill: white;
+  transition: fill .4s ease;
+}
+
+.hovered svg {
+  fill: #577477;
+}
+
+/* glider styling */
+.glider-contain {}
+
+/* TEMP */
+#w-node-b7697d53-7b99-709e-61ef-a2e22f3bc472-698cfd40 {
+  border: 2px solid red;
+  align-self: end;
+  ;
+}
