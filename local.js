@@ -15,7 +15,7 @@ if (document.querySelector('body').classList.contains('bodyhome')) {
       }
     })
   }, { threshold: 0 });
-  observer.observe(document.querySelector('.footer-wrap'));
+  observer.observe(document.querySelector('.footer'));
 }
 
 // generate image captions and reportage links on Homepage //
