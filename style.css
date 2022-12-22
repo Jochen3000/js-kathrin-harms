@@ -14,7 +14,6 @@ body {
 .imagecaption p {
   font-size: 14px;
   padding-right: 4px;
-  text-transform: uppercase;
 }
 
 /* kleiner hack wegen icon */
