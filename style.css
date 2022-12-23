@@ -36,3 +36,10 @@ svg {
 .hovered svg {
   fill: #577477;
 }
+
+/* media query */
+@media (max-width: 767px) {
+  .alwaystakemeblock {
+    width: 100%;
+  }
+}
