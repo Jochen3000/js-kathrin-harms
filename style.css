@@ -9,6 +9,11 @@ body {
 .imagecaption {
   -webkit-justify-content: end;
   justify-content: end;
+
+}
+
+.imagecaption {
+  margin-top: 20px;
 }
 
 .imagecaption p {
@@ -19,6 +24,7 @@ body {
 /* kleiner hack wegen icon */
 .w-embed {
   padding-top: 1px;
+  margin-left: 12px;
 }
 
 /* foldericon on js hover */

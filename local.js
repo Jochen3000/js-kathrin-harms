@@ -84,13 +84,13 @@ if (document.querySelector('body').classList.contains('bodyhome')) {
 }
 
 // glider.js on reportage pages
-if (document.querySelector('body').classList.contains('bodyreportage') && !mediaQueryTabletV.matches) {
-  new Glider(document.querySelector('.glider'), {
-    slidesToShow: 1,
-    arrows: {
-      prev: '.glider-prev',
-      next: '.glider-next'
-    },
-  });
-}
+// if (document.querySelector('body').classList.contains('bodyreportage') && !mediaQueryTabletV.matches) {
+//   new Glider(document.querySelector('.glider'), {
+//     slidesToShow: 1,
+//     arrows: {
+//       prev: '.glider-prev',
+//       next: '.glider-next'
+//     },
+//   });
+// }
 
