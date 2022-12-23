@@ -1,5 +1,5 @@
 // General //
-const mediaQuery = window.matchMedia('(max-width: 479px)'); // mobile
+const mediaQuery = window.matchMedia('(max-width: 767px)'); // mobile
 const mediaQueryTabletV = window.matchMedia('(max-width: 991px)');
 
 // back to top arrow on Homepage //
