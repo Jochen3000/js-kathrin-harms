@@ -7,9 +7,13 @@ body {
 
 /* image captions */
 .imagecaption {
+  -webkit-justify-content: start;
+  justify-content: start;
+}
+
+a .imagecaption {
   -webkit-justify-content: end;
   justify-content: end;
-
 }
 
 .imagecaption {
